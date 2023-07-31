@@ -56,10 +56,10 @@ line-height: 24px;
    left: 0; 
    top:50%;
 transform:translateY(-50%);
+animation: slide-out 0.4s forwards;
 }
 .light #switch button{
-    left: initial;
-    right: 0;
+   animation: slide-in 0.4s forwards;
 
 }
 
@@ -147,4 +147,20 @@ footer{
     --holder-surface-color:rgba(0,0,0,0.02);
     --social-link-hover-color:rgba(0,0,0,0.1);
     --switch-bg:url(./assets/sun.svg);
+}
+@keyframes slide-in{
+    from{
+        left:  0;
+    } 
+    to {
+        left: 50%;
+    }
+}
+@keyframes slide-out{
+    from{
+        left: 50%;
+    } 
+    to{
+        left: 0;
+    }
 }
